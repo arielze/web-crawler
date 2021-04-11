@@ -1,7 +1,7 @@
 import sys
 import requests
 from requests.exceptions import RequestException, HTTPError
-from typing import List, Any, Tuple
+from typing import List, Any, Tuple, Set
 from queue import Queue
 from html.parser import HTMLParser
 from urllib.parse import urljoin, urlparse
@@ -19,7 +19,7 @@ class URLsManager:
     '''
     def __init__(self):
         self.urls = {}
-        self.queue = Queue()
+        self.queue: Queue = Queue()
 
     def save_url(self, url: str, status: int, score: float, depth: int, message: str = ''):
         url_key = self.url_key(url)
@@ -79,7 +79,7 @@ class URLDataParser(HTMLParser):
 
     def __init__(self, url: str):
         self.base_url = url
-        self.links = set()
+        self.links: Set[dict] = set()
         HTMLParser.__init__(self)
 
     def handle_starttag(self, tag, attrs):

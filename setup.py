@@ -9,7 +9,7 @@ inst_reqs = [
 ]
 
 extra_reqs = {
-    "test": ["pytest", "pytest-cov", "pytest-mock"],
+    "test": ["pytest", "pytest-cov", "pytest-mock", "mypy", "flake8"],
 }
 
 
