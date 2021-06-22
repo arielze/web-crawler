@@ -2,10 +2,6 @@ from setuptools import find_packages, setup
 
 inst_reqs = [
     "requests",
-    # "cachetools",
-    # "click",
-    # "beautifulsoup4",
-
 ]
 
 extra_reqs = {
@@ -14,9 +10,9 @@ extra_reqs = {
 
 
 setup(
-    name="Lightricks Crawler",
+    name="Sample Web Crawler",
     version="0.0.1",
-    description=u"Ariel's Crawler for Lightricks",
+    description=u"Ariel's Sample Web Crawler",
     python_requires=">=3.8",
     classifiers=[
         "Intended Audience :: Information Technology",
